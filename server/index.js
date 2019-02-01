@@ -9,7 +9,7 @@ let io = '';
 // Import and Set Nuxt.js options
 let config = require('../nuxt.config.js')
 config.dev = !(process.env.NODE_ENV === 'production')
-mongoose.connect('your_connection_string')
+mongoose.connect('your_link')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
   extended: true

@@ -49,7 +49,7 @@ export default {
       message: '',
       submitted: false,
       messages: [],
-      socketsAllow: false
+      socketsAllow: true
     }
   },
 
