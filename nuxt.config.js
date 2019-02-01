@@ -3,7 +3,7 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'universal',
-
+  serverMiddleware: ['~/server/index.js'],
   /*
   ** Headers of the page
   */

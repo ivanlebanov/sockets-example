@@ -65,3 +65,12 @@ app.post('/message', (req, res) => {
     return res.status(200).json({})
   })
 })
+
+app.get('/', (req, res, next) => {
+  res.send('API root')
+})
+// export the server middleware
+module.exports = {
+  path: '/api',
+  handler: app
+}
