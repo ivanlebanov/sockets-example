@@ -5,11 +5,10 @@ const { Nuxt, Builder } = require('nuxt')
 const app = express()
 const bodyParser = require('body-parser')
 var Message = require('./models/Message.js')
-let io = '';
+let io = ''
 // Import and Set Nuxt.js options
 let config = require('../nuxt.config.js')
 config.dev = !(process.env.NODE_ENV === 'production')
-mongoose.connect('your_link')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
   extended: true
@@ -66,10 +65,6 @@ app.post('/message', (req, res) => {
   })
 })
 
-app.get('/', (req, res, next) => {
-  res.send('API root')
-})
-// export the server middleware
 module.exports = {
   path: '/api',
   handler: app
